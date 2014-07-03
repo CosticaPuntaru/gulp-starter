@@ -31,6 +31,3 @@ app.run ($rootScope) ->
 
 require './main/main-ctrl.js'
 
-
-# configuration files:
-require './configuration/allways.coffee'
