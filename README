@@ -16,3 +16,7 @@ frameworks:
 to start:
 dev     -   gulp serve
 prod    -   gulp build
+
+
+uses browseriffy
+  - supports coffe and js file
