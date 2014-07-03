@@ -26,8 +26,6 @@ gulp.task('coffee', function() {
 
 gulp.task('scripts', ['coffee'], function () {
   return gulp.src('app/scripts/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.size());
 });
 
