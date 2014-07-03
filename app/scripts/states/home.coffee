@@ -8,6 +8,6 @@ addListState.config ($stateProvider) ->
         parent: 'default'
         views:
             header:
-                templateUrl: '/partials/partials/header.html'
+                templateUrl: 'partials/partials/header.html'
             content:
-                templateUrl: '/partials/states/home.html'
+                templateUrl: 'partials/states/home.html'

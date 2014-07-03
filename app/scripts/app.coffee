@@ -3,7 +3,7 @@
 require "./states/index.coffee"
 require './modules/utils/index.coffee'
 
-bk = angular.module 'bk', [
+app = angular.module 'App', [
     #3rd party modules
     'ngAnimate'
     'ngCookies'
@@ -17,15 +17,20 @@ bk = angular.module 'bk', [
     'bk.states'
     'bk.utils'
 ]
-bk.config([
+app.config([
     '$urlRouterProvider'
     '$locationProvider'
     ($urlRouterProvider, $locationProvider) ->
         $locationProvider.html5Mode(true).hashPrefix('!')
         $urlRouterProvider.otherwise '/404'
 ])
-bk.run ($rootScope) ->
+app.run ($rootScope) ->
     $rootScope.$on '$stateChangeError', (event, toState, toParams, fromState, fromParams, error) ->
-        console.error error
+        console.error 'ERROR ON CHANGE STATE:', error
+
 
 require './main/main-ctrl.js'
+
+
+# configuration files:
+require './configuration/allways.coffee'

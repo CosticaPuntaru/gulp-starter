@@ -14,12 +14,6 @@ gulp.task('styles', function () {
     .pipe($.size());
 });
 
-//gulp.task('coffee', function() {
-//  gulp.src('app/scripts/**/*.coffee')
-//    .pipe(coffee({bare: true}))
-//    .pipe(gulp.dest('.tmp/scripts/'))
-//    .pipe($.size());
-//});
 gulp.task('coffee', function() {
   gulp.src('app/scripts/app.coffee', { read: false })
     .pipe(browserify({
